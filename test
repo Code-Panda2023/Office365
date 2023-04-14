@@ -1,0 +1,17 @@
+channels = '1'
+address ='./data/GAN_damage/'
+#  './data/GAN/'
+#TV_Ch_recovery 1CHto1CH
+args = {'train': address + channels + '/train.mat',
+        'val': address+ channels + '/val.mat',
+        'test': address+ channels + '/testfiles/test4.mat',
+        'loss': address + channels + '/GAN_loss.csv',
+        'logname':'CH'+channels + '_GAN_ML',
+        'tensorlog': './Tensorboard_logs/' + channels,
+        'input_size':600,
+        'epochs': 1000,
+        'batchsize': 32,
+        'layers': 2,
+        'layers_D':3,
+        'lr': 1e-4}
+# print(args)
